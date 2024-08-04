@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #weather {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Weather App</h1>
+    <input type="text" id="city" placeholder="Enter city name">
+    <button onclick="getWeather()">Get Weather</button>
+    <div id="weather"></div>
+    <script>
+        async function getWeather() {
+            const city = document.getElementById('city').value;
+            const response = await fetch(`/api/weather?city=${city}`);
+            const data = await response.json();
+            
+            const weatherDiv = document.getElementById('weather');
+            if (response.ok) {
+                weatherDiv.innerHTML = `
+                    <h2>Weather in ${data.city}</h2>
+                    <p>Temperature: ${data.temperature}°C</p>
+                    <p>Weather: ${data.description}</p>
+                `;
+            } else {
+                weatherDiv.innerHTML = `<p>Error: ${data.error}</p>`;
+            }
+        }
+    </script>
+</body>
+</html>

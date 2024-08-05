@@ -6,3 +6,21 @@ git fetch
 ##Create a new branch from the main branch:
 git checkout -b branch-name origin/main
 
+##Commands to run when you want to commit your changes from your branch to the main branch
+Stage the needed files:
+git add your_file
+
+Commit the changes:
+git commit -m 'Added a file'
+
+Switch to the main branch:
+git checkout main
+
+Pull the latest changes from the remote main branch:
+git pull origin main
+
+Merge your changes from your branch:
+git merge your_branch
+
+Push the changes to the remote main branch:
+git push origin main

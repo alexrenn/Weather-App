@@ -24,3 +24,58 @@ git merge your_branch
 
 Push the changes to the remote main branch:
 git push origin main
+
+
+------------------
+#install node.js
+cmd (for mac): brew install node
+
+#in weather app directory, create a 'package.json' file
+cmd: npm init -y
+
+Step 2: Install Required Packages
+Express: A web framework for Node.js.
+Axios: A promise-based HTTP client for making API requests.
+dotenv: For managing environment variables.
+
+cmd: npm install express axios dotenv
+
+
+Step 3: Set Up Your Project Structure
+weather-app/
+├── node_modules/
+├── public/
+│   └── index.html
+├── src/
+│   ├── app.js
+│   └── routes/
+│       └── weather.js
+├── .env
+├── .gitignore
+├── package.json
+└── README.md
+
+
+#Step 4: Add API key to .env file
+cmd: echo "API_KEY=your_openweathermap_api_key">> .env
+
+#igore .env in .gitignore
+echo ".env" >> .gitignore
+
+Step 5: Set Up Express Server in src/app.js
+
+Step 6: Create weather route in src/routes/weather.js
+
+Step 7: Create frontend in public/index.html
+
+Step 8: run the Server
+cmd: node src/app.js
+
+go to: http://localhost:3000
+
+
+
+
+
+
+

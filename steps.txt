@@ -1,0 +1,8 @@
+#To add a branch to make changes in your local repository: 
+
+##Fetch the latest changes from the remote repository:
+git fetch 
+
+##Create a new branch from the main branch:
+git checkout -b branch-name origin/main
+

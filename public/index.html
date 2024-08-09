@@ -11,12 +11,16 @@
     <div class ="card">
         <div class="search">
             <input type="text" id="city" placeholder="Enter city name">
-            <button><img src="images search icon wo bg.png" ></button>
+            <button><img src="../images/search.png" alt="Search"></button>
+
         </div>
     </div>
-
+    
+    <div class="weather">
+        <img src="../images/rain.png" class="weather-icon">
+    </div>
     <button onclick="getWeather()">Get Weather</button>
-    <div id="weather"></div>
+    
     <script>
         async function getWeather() {
             const city = document.getElementById('city').value;
